@@ -1,0 +1,37 @@
+<div class="col-sm-12">
+	<div>{{serverStatus}}</div>
+
+	<form role="form">
+		<div class="form-group">
+			<label for="stream_url">Stream name</label>
+			<input type="text" class="form-control" id="stream_url" ng-model="streamSearchTerm">
+		</div>
+		<button type="submit" ng-click="getStreamData()" class="btn btn-primary">Get stream data</button>
+	</form>
+	<br>
+	<br>
+	<form role="form">
+		<div class="form-group">
+			<label for="stream_portrait">Portrait url</label>
+			<input value={{fromAPI.logo}} type="text" class="form-control" id="stream_portrait">
+		</div>
+		<div class="form-group">
+			<label for="stream_name">Name</label>
+			<input value={{fromAPI.display_name}} type="text" class="form-control" id="stream_name">
+		</div>  
+		<div class="form-group">
+			<label for="stream_status">Status</label>
+			<input value={{fromAPI.status}} type="text" class="form-control" id="stream_status">
+		</div>  
+		<div class="form-group">
+			<label for="stream_game">Game</label>
+			<input value={{fromAPI.game}} type="text" class="form-control" id="stream_game">
+		</div>
+		<div class="form-group">
+			<label for="stream_url">Stream url</label>
+			<input value={{fromAPI.url}} type="text" class="form-control" id="stream_url">
+		</div>
+		<button type="submit" ng-click="createStream()" class="btn btn-primary">Submit</button>
+	</form>
+
+</div>

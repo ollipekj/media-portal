@@ -1,0 +1,11 @@
+	
+		<div ng-repeat="podcast in soundcloudPodcasts">	
+		<div class="col-sm-6" ng-if="$odd">
+			<div><h3>{{podcast.title}}</h3></div>		
+			<div ng-bind-html="podcast.html"></div>
+		</div>
+		<div class="col-sm-6" ng-if="$even">
+			<div><h3>{{podcast.title}}</h3></div>		
+			<div ng-bind-html="podcast.html"></div>
+		</div>
+		</div>

@@ -1,0 +1,15 @@
+<div class="col-md-6">
+	<div>{{serverStatus}}</div>
+		<div class="page-header"><h3>Delete all links</h3>
+		</div><button type="submit" ng-click="deleteAllStreams()" class="btn btn-danger">Delete</button>
+	<div class="page-header"><h3>Delete a single stream</h3></div>
+	<div ng-repeat="stream in streams" class="panel panel-default">	
+		<div class="panel-body">
+			<img class="img-rounded stream-img" align="left" src={{stream.logo}} height=60 width=60>
+			<strong>{{stream.name}}</strong><br>
+		</div>
+		<div class="panel-footer">
+			<button ng-click="deleteStream(stream._id)" class="btn btn-danger">Remove</button>	
+		</div>		
+	</div>
+</div>

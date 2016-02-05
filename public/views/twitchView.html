@@ -1,0 +1,36 @@
+	<div class="col-md-12">	
+		<div ng-bind-html="streamPlayer"><div/>	
+	</div>
+	<div class="col-md-6">
+		<div class="page-header"><h3>Online</h3></div>
+		<div ng-repeat="on in onlineStreams" class="panel panel-default">	
+			<div class="panel-body">
+				<img class="img-rounded stream-img" align="left" src={{on.logo}} height=60 width=60>
+				<strong>{{on.name}}</strong><br>
+				{{on.status}}<br>
+				{{on.game}}
+			</div>
+			<div class="panel-footer">
+				<button ng-click="playChannel(on.name)" class="btn btn-primary">Watch</button>	
+				&nbsp;&nbsp;<a href={{on.url}} target=blank>{{on.url}}</a>
+			</div>		
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="page-header"><h3>Offline</h3></div>
+		<div ng-repeat="off in offlineStreams" class="panel panel-default">
+			<div ng-class-odd='row'>
+			<div class="panel-body">
+				<img class="img-rounded stream-img" align="left" src={{off.logo}} height=60 width=60>
+				<strong>{{off.name}}</strong><br>
+				{{off.status}}<br>
+				{{off.game}}
+			</div>
+
+			<div class="panel-footer">
+				<button class="btn btn-primary disabled">Watch</button>
+				&nbsp;&nbsp;<a href={{off.url}} target=blank>{{off.url}}</a>
+			</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,14 @@
+<div class="col-md-6">
+	<div>{{serverStatus}}</div>
+		<div class="page-header"><h3>Delete all links</h3></div>
+		<button type="submit" ng-click="deleteAllLinks()" class="btn btn-danger">Delete</button>
+	<div class="page-header"><h3>Delete a single link</h3></div>
+	<div ng-repeat="link in links" class="panel panel-default">	
+		<div class="panel-body">
+			<strong>{{link.title}}</strong>, {{link.url}}<br>
+		</div>
+		<div class="panel-footer">
+			<button ng-click="deleteLink(link._id)" class="btn btn-danger">Remove</button>	
+		</div>		
+	</div>
+</div>

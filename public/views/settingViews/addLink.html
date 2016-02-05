@@ -1,0 +1,15 @@
+<div class="col-sm-12">
+	<div>{{serverStatus}}</div>
+
+	<form role="form">
+		<div class="form-group">
+			<label for="site_name">Site name</label>
+			<input type="text" class="form-control" id="site_name" ng-model="linkInfo.name">
+		</div>
+		<div class="form-group">
+			<label for="stream_url">Site url</label>
+			<input type="text" class="form-control" id="stream_url" ng-model="linkInfo.url">
+		</div>
+		<button type="submit" ng-click="createLink()" class="btn btn-primary">Save the link</button>
+	</form>
+</div>

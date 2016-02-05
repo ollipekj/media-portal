@@ -1,0 +1,11 @@
+<div class="col-sm-12">
+	<div>{{serverStatus}}</div>
+
+	<form role="form">
+		<div class="form-group">
+			<label for="soundcloud_url">Soundcloud url</label>
+			<input type="text" class="form-control" id="soundcloud_url" ng-model="soundcloudUrl">
+		</div>
+		<button type="submit" ng-click="createSoundcloudEntry()" class="btn btn-primary">Save podcast</button>
+	</form>
+</div>
